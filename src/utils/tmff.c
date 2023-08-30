@@ -12,30 +12,30 @@
 
 #include "../../include/header.h"
 
-int	new_quotes(int quote)
+int new_quotes(int quote)
 {
-	t_quotes	*index;
+        t_quotes *index;
 
-	index = (data())->p_index->quotes;
-	while (index->next)
-		index = index->next;
-	index->next = malloc(sizeof(t_quotes));
-	if (!index->next)
-		return (0);
-	index->next->quote = quote;
-	index->next->quoted_from = (data())->i;
-	index->next->quoted_to = (data())->j - 3;
-	index->next->next = NULL;
-	return (1);
+        index = (data())->p_index->quotes;
+        while (index->next)
+                index = index->next;
+        index->next = malloc(sizeof(t_quotes));
+        if (!index->next)
+                return (0);
+        index->next->quote = quote;
+        index->next->quoted_from = (data())->i;
+        index->next->quoted_to = (data())->j - 3;
+        index->next->next = NULL;
+        return (1);
 }
 
-int	was_quoted(t_quotes *index, int i)
+int was_quoted(t_quotes *index, int i)
 {
-	while (index)
-	{
-		if (i >= index->quoted_from && i <= index->quoted_to)
-			return (index->quote);
-		index = index->next;
-	}
-	return (0);
+        while (index)
+        {
+                if (i >= index->quoted_from && i <= index->quoted_to)
+                        return (index->quote);
+                index = index->next;
+        }
+        return (0);
 }

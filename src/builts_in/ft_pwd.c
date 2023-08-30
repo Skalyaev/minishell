@@ -12,25 +12,25 @@
 
 #include "../../include/header.h"
 
-int	ft_pwd(int fd)
+int ft_pwd(int fd)
 {
-	char	*buff;
-	int		size;
+        char *buff;
+        int size;
 
-	size = 1;
-	buff = malloc(sizeof(char) * size);
-	if (!buff)
-		return (-1);
-	while (!getcwd(buff, size))
-	{
-		free(buff);
-		size++;
-		buff = malloc(sizeof(char) * size);
-		if (!buff)
-			return (-1);
-	}
-	ft_putstr_fd(buff, fd);
-	ft_putstr_fd("\n", fd);
-	free(buff);
-	return (0);
+        size = 1;
+        buff = malloc(sizeof(char) * size);
+        if (!buff)
+                return (-1);
+        while (!getcwd(buff, size))
+        {
+                free(buff);
+                size++;
+                buff = malloc(sizeof(char) * size);
+                if (!buff)
+                        return (-1);
+        }
+        ft_putstr_fd(buff, fd);
+        ft_putstr_fd("\n", fd);
+        free(buff);
+        return (0);
 }

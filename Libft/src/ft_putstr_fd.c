@@ -12,36 +12,34 @@
 
 #include "../include/libft.h"
 
-// Write S dans FD
-int	ft_putstr_fd(char *s, int fd)
+int ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+        int i;
 
-	i = -1;
-	while (s && s[++i])
-	{
-		if (write(fd, &s[i], 1) < 0)
-		{
-			perror("minishell: write failed");
-			return (0);
-		}
-	}
-	return (1);
+        i = -1;
+        while (s && s[++i])
+        {
+                if (write(fd, &s[i], 1) < 0)
+                {
+                        perror("minishell: write failed");
+                        return (0);
+                }
+        }
+        return (1);
 }
 
-// Write S suivi d'un '\n' dans FD
-int	ft_putstrn_fd(char *s, int fd)
+int ft_putstrn_fd(char *s, int fd)
 {
-	int	i;
+        int i;
 
-	i = -1;
-	while (s[++i])
-	{
-		if (write(fd, &s[i], 1) < 0)
-		{
-			perror("minishell: write failed");
-			return (0);
-		}
-	}
-	return (1);
+        i = -1;
+        while (s[++i])
+        {
+                if (write(fd, &s[i], 1) < 0)
+                {
+                        perror("minishell: write failed");
+                        return (0);
+                }
+        }
+        return (1);
 }

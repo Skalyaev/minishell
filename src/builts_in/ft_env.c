@@ -12,15 +12,15 @@
 
 #include "../../include/header.h"
 
-int	ft_env(int fd)
+int ft_env(int fd)
 {
-	int	i;
+        int i;
 
-	i = -1;
-	while ((data())->envp && (data())->envp[++i])
-	{
-		ft_putstr_fd((data())->envp[i], fd);
-		ft_putstr_fd("\n", fd);
-	}
-	return (0);
+        i = -1;
+        while ((data())->envp && (data())->envp[++i])
+        {
+                ft_putstr_fd((data())->envp[i], fd);
+                ft_putstr_fd("\n", fd);
+        }
+        return (0);
 }

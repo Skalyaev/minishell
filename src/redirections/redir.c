@@ -12,36 +12,34 @@
 
 #include "../../include/header.h"
 
-//Counts a specific flag in the pipe block
-int	count_block_flags(t_parsing *tmp, int flag)
+int count_block_flags(t_parsing *tmp, int flag)
 {
-	int			ret;
+        int ret;
 
-	ret = 0;
-	if (tmp && tmp->flag == PIP)
-		tmp = tmp->next;
-	while (tmp && tmp->flag != PIP)
-	{
-		if (tmp->flag == flag)
-			ret++;
-		tmp = tmp->next;
-	}
-	return (ret);
+        ret = 0;
+        if (tmp && tmp->flag == PIP)
+                tmp = tmp->next;
+        while (tmp && tmp->flag != PIP)
+        {
+                if (tmp->flag == flag)
+                        ret++;
+                tmp = tmp->next;
+        }
+        return (ret);
 }
 
-//Counts a specific flag in the pipeline
-int	count_list_flags(int flag)
+int count_list_flags(int flag)
 {
-	int			ret;
-	t_parsing	*tmp;
+        int ret;
+        t_parsing *tmp;
 
-	ret = 0;
-	tmp = (data())->p_start;
-	while (tmp)
-	{
-		if (tmp->flag == flag)
-			ret++;
-		tmp = tmp->next;
-	}
-	return (ret);
+        ret = 0;
+        tmp = (data())->p_start;
+        while (tmp)
+        {
+                if (tmp->flag == flag)
+                        ret++;
+                tmp = tmp->next;
+        }
+        return (ret);
 }

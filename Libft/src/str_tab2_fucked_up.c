@@ -12,16 +12,15 @@
 
 #include "../include/libft.h"
 
-// Free TAB et son contenu
-int	str_tab2_fucked_up(char	***tab, int size)
+int str_tab2_fucked_up(char ***tab, int size)
 {
-	int	i;
+        int i;
 
-	i = -1;
-	while (++i < size)
-		if ((*tab)[i])
-			free((*tab)[i]);
-	free(*tab);
-	*tab = NULL;
-	return (0);
+        i = -1;
+        while (++i < size)
+                if ((*tab)[i])
+                        free((*tab)[i]);
+        free(*tab);
+        *tab = NULL;
+        return (0);
 }

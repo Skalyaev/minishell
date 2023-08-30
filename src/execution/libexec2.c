@@ -12,23 +12,23 @@
 
 #include "../../include/header.h"
 
-int	is_builtin(char *str)
+int is_builtin(char *str)
 {
-	if (!str || !str[0])
-		return (-1);
-	if (ft_strcmp(str, "cd"))
-		return (1);
-	if (ft_strcmp(str, "env"))
-		return (2);
-	if (ft_strcmp(str, "echo"))
-		return (3);
-	if (ft_strcmp(str, "exit"))
-		return (4);
-	if (ft_strcmp(str, "export"))
-		return (5);
-	if (ft_strcmp(str, "pwd"))
-		return (6);
-	if (ft_strcmp(str, "unset"))
-		return (7);
-	return (0);
+        if (!str || !str[0])
+                return (-1);
+        if (ft_strcmp(str, "cd"))
+                return (1);
+        if (ft_strcmp(str, "env"))
+                return (2);
+        if (ft_strcmp(str, "echo"))
+                return (3);
+        if (ft_strcmp(str, "exit"))
+                return (4);
+        if (ft_strcmp(str, "export"))
+                return (5);
+        if (ft_strcmp(str, "pwd"))
+                return (6);
+        if (ft_strcmp(str, "unset"))
+                return (7);
+        return (0);
 }
