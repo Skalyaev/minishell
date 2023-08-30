@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguinau <constantasg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/15 03:52:49 by anguinau          #+#    #+#             */
-/*   Updated: 2022/08/06 03:54:50 by anguinau         ###   ########.fr       */
+/*   Created: 2020/11/17 04:58:26 by anguinau          #+#    #+#             */
+/*   Updated: 2022/06/15 03:28:50 by anguinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../include/libft.h"
 
-// Return 1 si TO_FIND est dans les N premiers char de SRC, sinon 0
-int	ft_strncmp(char *src, char *to_find, int n)
+// Return positif si C est un caractère alphabétique, sinon 0
+int	ft_isalpha(int c)
 {
-	int	i;
-
-	i = 0;
-	while (i < n && src[i] && to_find[i] && src[i] == to_find[i])
-		i++;
-	if (!to_find[i])
-		return (1);
-	return (0);
+	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
 }

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../include/libft.h"
 
 // Return un long long à partir de NPTR
 long long	ft_atoi(const char *nptr)

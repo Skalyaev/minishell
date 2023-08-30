@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   return_int.c                                       :+:      :+:    :+:   */
+/*   free_str_tab2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguinau <constantasg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 20:53:00 by anguinau          #+#    #+#             */
-/*   Updated: 2022/06/15 02:55:17 by anguinau         ###   ########.fr       */
+/*   Created: 2022/06/19 17:07:15 by anguinau          #+#    #+#             */
+/*   Updated: 2022/06/19 17:08:38 by anguinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../include/libft.h"
 
-// Return N1 ou N2 selon qui est le plus grand
-int	return_max(int n1, int n2)
+// Free TAB et son contenu
+int	free_str_tab2(char **tab)
 {
-	if (n1 > n2)
-		return (n1);
-	return (n2);
-}
+	int	i;
 
-// Return N1 ou N2 selon qui est le plus petit
-int	return_min(int n1, int n2)
-{
-	if (n1 < n2)
-		return (n1);
-	return (n2);
+	i = -1;
+	while (tab[++i])
+		free(tab[i]);
+	free(tab);
+	return (0);
 }

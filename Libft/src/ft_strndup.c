@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jchene <jchene@student.42.fr>              +#+  +:+       +#+        */
+/*   By: anguinau <constantasg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 01:22:01 by anguinau          #+#    #+#             */
-/*   Updated: 2022/06/06 17:28:21 by jchene           ###   ########.fr       */
+/*   Updated: 2022/08/06 09:17:52 by anguinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../include/libft.h"
 
-// Malloc & return une copie de S
-char	*ft_strdup(const char *s)
+// Malloc & return un char* qui contient LEN char de S à partir de START
+char	*ft_strndup(const char *s, int len, int start)
 {
 	size_t	i;
-	size_t	j;
-	size_t	k;
+	int		j;
+	int		k;
 	char	*str;
 
 	i = 0;
-	if (!s)
-		return (NULL);
-	while (s[i])
+	j = 0;
+	while (s[start + i] && j < len)
+	{
 		i++;
+		j++;
+	}
 	str = malloc(i + 1);
 	if (!str)
 		return (NULL);
-	j = -1;
-	k = -1;
+	k = 0;
+	j = 0;
 	while (i--)
-		str[++j] = s[++k];
-	str[++j] = s[++k];
+		str[j++] = s[start + k++];
+	str[j] = '\0';
 	return (str);
 }

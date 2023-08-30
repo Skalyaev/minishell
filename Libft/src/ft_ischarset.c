@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_ischarset.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguinau <constantasg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 14:47:51 by anguinau          #+#    #+#             */
-/*   Updated: 2022/06/15 02:29:55 by anguinau         ###   ########.fr       */
+/*   Created: 2022/06/15 03:46:31 by anguinau          #+#    #+#             */
+/*   Updated: 2022/08/04 21:19:21 by anguinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../include/libft.h"
 
-// Echange les valeurs int de PTR1 et PTR2
-void	ft_swap(int *ptr1, int *ptr2)
+// Return 1 si C fait partie de STR, sinon 0
+int	ft_ischarset(char *str, char c)
 {
-	int	temp;
+	unsigned int	i;
 
-	temp = *ptr1;
-	*ptr1 = *ptr2;
-	*ptr2 = temp;
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
 }

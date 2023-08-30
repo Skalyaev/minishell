@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strndup.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguinau <constantasg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 01:22:01 by anguinau          #+#    #+#             */
-/*   Updated: 2022/08/06 09:17:52 by anguinau         ###   ########.fr       */
+/*   Created: 2022/06/15 03:52:49 by anguinau          #+#    #+#             */
+/*   Updated: 2022/08/06 03:54:50 by anguinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../include/libft.h"
 
-// Malloc & return un char* qui contient LEN char de S à partir de START
-char	*ft_strndup(const char *s, int len, int start)
+// Return 1 si TO_FIND est dans les N premiers char de SRC, sinon 0
+int	ft_strncmp(char *src, char *to_find, int n)
 {
-	size_t	i;
-	int		j;
-	int		k;
-	char	*str;
+	int	i;
 
 	i = 0;
-	j = 0;
-	while (s[start + i] && j < len)
-	{
+	while (i < n && src[i] && to_find[i] && src[i] == to_find[i])
 		i++;
-		j++;
-	}
-	str = malloc(i + 1);
-	if (!str)
-		return (NULL);
-	k = 0;
-	j = 0;
-	while (i--)
-		str[j++] = s[start + k++];
-	str[j] = '\0';
-	return (str);
+	if (!to_find[i])
+		return (1);
+	return (0);
 }

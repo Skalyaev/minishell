@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   str_tab2_fucked_up.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguinau <constantasg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 05:20:11 by anguinau          #+#    #+#             */
-/*   Updated: 2022/06/15 03:28:33 by anguinau         ###   ########.fr       */
+/*   Created: 2022/06/19 15:52:18 by anguinau          #+#    #+#             */
+/*   Updated: 2022/08/02 02:59:55 by anguinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../include/libft.h"
 
-// Return 1 si C est un caractère ASCII, sinon 0
-int	ft_isascii(int c)
+// Free TAB et son contenu
+int	str_tab2_fucked_up(char	***tab, int size)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
+	int	i;
+
+	i = -1;
+	while (++i < size)
+		if ((*tab)[i])
+			free((*tab)[i]);
+	free(*tab);
+	*tab = NULL;
 	return (0);
 }

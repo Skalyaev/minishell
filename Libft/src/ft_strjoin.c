@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../include/libft.h"
 
 // Malloc & return un char* qui contient S1 suivi de S2
 char	*ft_strjoin(const char *s1, const char *s2)

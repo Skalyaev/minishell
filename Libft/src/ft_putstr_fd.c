@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../include/libft.h"
 
 // Write S dans FD
 int	ft_putstr_fd(char *s, int fd)

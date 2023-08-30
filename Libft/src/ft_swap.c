@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_str_tab2.c                                    :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguinau <constantasg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/19 17:07:15 by anguinau          #+#    #+#             */
-/*   Updated: 2022/06/19 17:08:38 by anguinau         ###   ########.fr       */
+/*   Created: 2022/02/10 14:47:51 by anguinau          #+#    #+#             */
+/*   Updated: 2022/06/15 02:29:55 by anguinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../include/libft.h"
 
-// Free TAB et son contenu
-int	free_str_tab2(char **tab)
+// Echange les valeurs int de PTR1 et PTR2
+void	ft_swap(int *ptr1, int *ptr2)
 {
-	int	i;
+	int	temp;
 
-	i = -1;
-	while (tab[++i])
-		free(tab[i]);
-	free(tab);
-	return (0);
+	temp = *ptr1;
+	*ptr1 = *ptr2;
+	*ptr2 = temp;
 }

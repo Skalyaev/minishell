@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../include/libft.h"
 
 // Return l'index du début de TO_FIND si il est trouvé dans STR, sinon -1
 int	ft_strchr(char *str, const char *to_find)

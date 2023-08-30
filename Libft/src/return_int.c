@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   return_int.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anguinau <constantasg@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 05:14:32 by anguinau          #+#    #+#             */
-/*   Updated: 2022/06/15 03:28:58 by anguinau         ###   ########.fr       */
+/*   Created: 2022/02/10 20:53:00 by anguinau          #+#    #+#             */
+/*   Updated: 2022/06/15 02:55:17 by anguinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../include/libft.h"
 
-// Return positif si C est un caractère alphanumérique, sinon 0
-int	ft_isalnum(int c)
+// Return N1 ou N2 selon qui est le plus grand
+int	return_max(int n1, int n2)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	if (n1 > n2)
+		return (n1);
+	return (n2);
+}
+
+// Return N1 ou N2 selon qui est le plus petit
+int	return_min(int n1, int n2)
+{
+	if (n1 < n2)
+		return (n1);
+	return (n2);
 }
