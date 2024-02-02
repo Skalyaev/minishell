@@ -17,7 +17,7 @@
 - [x] Pipe
 - [x] Redirection
 - [x] Exit status
-- [x] Signals
+- [x] SIGINT, SIGQUIT, EOF
 - [x] Builtins:
     * [x] echo with option -n
     * [x] cd with only a relative or absolute path
