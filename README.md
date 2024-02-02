@@ -13,6 +13,7 @@
 - [x] Prompt
 - [x] History
 - [x] Environment
+- [x] Execution
 - [x] Single/Double quote
 - [x] Pipe
 - [x] Redirection
