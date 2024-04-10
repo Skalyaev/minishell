@@ -13,7 +13,7 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-#include "../Libft/include/libft.h"
+#include "libft-minishell.h"
 #include <errno.h>
 #include <readline/readline.h>
 #include <readline/history.h>

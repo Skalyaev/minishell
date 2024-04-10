@@ -1,15 +1,10 @@
 # Minishell
-> *As beautiful as a shell*
+> *Ce projet consiste à créer un shell simple. Vous apprendrez beaucoup sur les processus et les descripteurs de fichiers.*
 
-*The existence of shells is linked to the very existence of IT.*
-*At the time, all developers agreed that communicating with a computer using aligned 1/0 switches was seriously irritating.*
-*It was only logical that they came up with the idea of creating a software to communicate with a computer using interactive lines of commands in a language somewhat close to the human language.*
-*Thanks to Minishell, you’ll be able to travel through time and come back to problems people faced when Windows didn’t exist.*
+## Preview
+![](https://github.com/Skalyaeve/images/blob/main/screenshot/minishell.gif)
 
->This project is about creating a simple shell. Yes, your own little bash.
->You will learn a lot about processes and file descriptors.
-
-## Checklists
+## Checklist
 - [x] Prompt
 - [x] History
 - [x] Environment
@@ -30,11 +25,42 @@
 - [x] No leaks
 - [x] No crashes
 
+## Install
+```bash
+sudo apt update -y
+sudo apt install -y gcc
+sudo apt install -y make
+sudo apt install -y libreadline-dev
+```
+```bash
+mkdir -p $HOME/.local/bin
+mkdir -p $HOME/.local/src
+mkdir -p $HOME/.local/include
+```
+```bash
+link=Skalyaeve/minishell
+name=minishell
+
+git clone https://github.com/$link.git $name
+cd .. && make && make clean
+
+ln -s $PWD/$name $HOME/.local/bin/$name
+ln -s $PWD/src $HOME/.local/src/$name
+ln -s $PWD/include $HOME/.local/include/$name
+```
+
 ## Usage
-```sh
-git clone git@github.com:Skalyaeve/minishell.git
-cd minishell
-sudo apt-get install libreadline-dev
-make
-./minishell
+```bash
+export PATH=$HOME/.local/bin:$PATH
+minishell
+```
+
+## Uninstall
+```bash
+name=minishell
+
+rm -r $name
+rm $HOME/.local/bin/$name
+rm $HOME/.local/src/$name
+rm $HOME/.local/include/$name
 ```
