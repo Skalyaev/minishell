@@ -2,7 +2,7 @@
 > *Ce projet consiste à créer un shell simple. Vous apprendrez beaucoup sur les processus et les descripteurs de fichiers.*
 
 ## Preview
-![](https://github.com/Skalyaeve/images/blob/main/screenshot/minishell.gif)
+![](https://github.com/Skalyaeve/images-1/blob/main/screenshot/minishell.gif)
 
 ## Checklist
 - [x] Prompt
