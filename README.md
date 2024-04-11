@@ -1,31 +1,30 @@
-# Minishell
+# <p align="center">minishell</p>
 > *Ce projet consiste à créer un shell simple. Vous apprendrez beaucoup sur les processus et les descripteurs de fichiers.*
 
-## Preview
+## Aperçu
 ![](https://github.com/Skalyaeve/images-1/blob/main/screenshot/minishell.gif)
 
 ## Checklist
-- [x] Prompt
-- [x] History
-- [x] Environment
-- [x] Execution
-- [x] Single/Double quote
-- [x] Pipe
-- [x] Redirection
-- [x] Exit status
-- [x] SIGINT, SIGQUIT, EOF
+- [x] Parsing
+- [x] Environnement
+- [x] Exécution
+- [x] Statut de sortie
+- [x] Pipes/Redirections
+- [x] Guillemets simples/doubles
+- [x] Historique
+- [x] SIGINT, SIGQUIT
 - [x] Builtins:
-    * [x] echo with option -n
-    * [x] cd with only a relative or absolute path
-    * [x] pwd with no options
-    * [x] export with no options
-    * [x] unset with no options
-    * [x] env with no options or arguments
-    * [x] exit with no options
+    * **`echo`** with option **`-n`**
+    * **`cd`** avec uniquement un chemin relatif ou absolu
+    * **`pwd`** sans options
+    * **`export`** sans options
+    * **`unset`** sans options
+    * **`env`** sans options ni arguments
+    * **`exit`** sans options
 - [x] No leaks
 - [x] No crashes
 
-## Install
+## Installer
 ```bash
 sudo apt update -y
 sudo apt install -y gcc
@@ -49,13 +48,13 @@ ln -s $PWD/src $HOME/.local/src/$name
 ln -s $PWD/include $HOME/.local/include/$name
 ```
 
-## Usage
+## Utiliser
 ```bash
 export PATH=$HOME/.local/bin:$PATH
 minishell
 ```
 
-## Uninstall
+## Désinstaller
 ```bash
 name=minishell
 
