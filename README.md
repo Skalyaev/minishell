@@ -1,7 +1,7 @@
 # <p align="center">minishell</p>
 > *Ce projet consiste à créer un shell simple. Vous apprendrez beaucoup sur les processus et les descripteurs de fichiers.*
 
-## Aperçu
+## Preview
 ![](https://github.com/Skalyaeve/images-1/blob/main/screenshot/minishell.gif)
 
 ## Checklist
@@ -24,7 +24,7 @@
 - [x] No leaks
 - [x] No crashes
 
-## Installer
+## Install
 ```bash
 sudo apt update -y
 sudo apt install -y gcc
@@ -41,25 +41,26 @@ link=Skalyaeve/minishell
 name=minishell
 
 git clone https://github.com/$link.git $name
-cd .. && make && make clean
+cd $name && make && make clean
 
 ln -s $PWD/$name $HOME/.local/bin/$name
 ln -s $PWD/src $HOME/.local/src/$name
 ln -s $PWD/include $HOME/.local/include/$name
 ```
 
-## Utiliser
+## Usage
 ```bash
 export PATH=$HOME/.local/bin:$PATH
 minishell
 ```
 
-## Désinstaller
+## Uninstall
 ```bash
 name=minishell
 
-rm -r $name
+rm -rf $name
 rm $HOME/.local/bin/$name
 rm $HOME/.local/src/$name
 rm $HOME/.local/include/$name
 ```
+
