@@ -1,3 +1,4 @@
 .*.swp
 obj/
 minishell
+.bash_history
